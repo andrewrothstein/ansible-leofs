@@ -1,0 +1,6 @@
+---
+leofs_ver : '1.2.21'
+leofs_rev : '-1'
+leofs_os : 'el7'
+leofs_platform : 'x86_64'
+leofs_mirror : 'https://github.com/leo-project/leofs/releases/download'

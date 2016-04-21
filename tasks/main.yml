@@ -1,0 +1,29 @@
+---
+- name: create leofs group
+  group: name=leofs state=present
+
+- name: create leofs user
+  user: >-
+    name=leofs
+    group=leofs
+    state=present
+
+
+- name: download rpm
+  get_url: >-
+    url={{leofs_rpm_url}}
+    dest=/tmp/{{leofs_rpm}}
+    owner=root
+    group=root
+    mode=0644
+
+- name: install rpm
+  package: name=/tmp/{{leofs_rpm}} state=present
+
+- name: chmod leofs distro
+  file: >-
+    path=/usr/local/leofs/{{leofs_ver}}
+    owner=leofs
+    group=leofs
+    recurse=yes
+

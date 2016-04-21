@@ -1,0 +1,4 @@
+---
+# vars file for leofs
+leofs_rpm : 'leofs-{{leofs_ver}}{{leofs_rev}}.{{leofs_os}}.{{leofs_platform}}.rpm'
+leofs_rpm_url : '{{leofs_mirror}}/{{leofs_ver}}/{{leofs_rpm}}'
